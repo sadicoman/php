@@ -17,7 +17,7 @@
                     <ul class="form__liste">
                         <li class="form__el">
                             <label class="label" for="image">Image</label>
-                            <input class="input" type="file" is="image" name="user_image" autocomplete="off">
+                            <input class="input" type="file" name="image">
                         </li>
                        
                         <li class="form__el">
@@ -28,17 +28,20 @@
             </div>
         </section>
         <?php 
-            $_FILES['image']['name'] //Nom
-            $_FILES['image']['type'] //Type image/png
-            $_FILES['image']['size'] //Taille
-            $_FILES['image']['tmp_name'] //Emplacement fichier temporaire
-            $_FILES['image']['error'] //Erreur
+            // $_FILES['image']['name'] //Nom
+            // $_FILES['image']['type'] //Type image/png
+            // $_FILES['image']['size'] //Taille
+            // $_FILES['image']['tmp_name'] //Emplacement fichier temporaire
+            // $_FILES['image']['error'] //Erreur
 
-            if (issets($_FILES['image']) && $_FILES['image']['error'] == 0){
+            if (isset($_FILES['image']) && $_FILES['image']['error'] == 0){
                 if ($_FILES['image']['size'] <= 3000000){
-                    $
-                    if (condition) {
-                        # code...
+                    $informasImage = pathinfo($_FILES['image']['name']);
+                    $extensionImage = $informasImage['extension'];
+                    $extensionArray = array('png', 'gif', 'jpeg', 'jpg');
+                    if (in_array($extensionImage, $extensionArray)) {
+                        move_uploaded_file($_FILES['image']['tmp_name'], 'assets/uploads/'.time().basename($_FILES['image']['name']));
+                        echo 'Envoie bien réussi !';
                     }
                 }
             }
