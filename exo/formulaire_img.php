@@ -40,7 +40,8 @@
                     $extensionImage = $informasImage['extension'];
                     $extensionArray = array('png', 'gif', 'jpeg', 'jpg');
                     if (in_array($extensionImage, $extensionArray)) {
-                        move_uploaded_file($_FILES['image']['tmp_name'], 'assets/uploads/'.time().basename($_FILES['image']['name']));
+                        // move_uploaded_file($_FILES['image']['tmp_name'], 'assets/uploads/'.time().basename($_FILES['image']['name']));
+                        move_uploaded_file($_FILES['image']['tmp_name'], 'assets/uploads/'.time().rand().'.'.$extensionImage);
                         echo 'Envoie bien réussi !';
                     }
                 }
