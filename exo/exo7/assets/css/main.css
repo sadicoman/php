@@ -1,0 +1,99 @@
+/* Font imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Font*/
+*{
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	background: #EFEAEA;
+}
+.test3{
+	display:inline-flex;
+	padding: 10px 20px 10px 80px;
+	background: #1AB3AD;  
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 140%;
+	color: #FFFFFF;
+}
+.test3{
+	width: 100%;
+	max-width: 360px;
+	font-weight: 500;
+	font-size: 24px;
+	padding: 10px 60px 10px 30px;
+}
+.section__form{
+	max-width:360px;
+	margin:auto;
+}
+/* Placement formulaire au centre de la page*/
+.form{ 
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+/* Liste*/
+.form__liste{
+	list-style:none;
+	padding: 0;
+  	margin: 0;
+}
+.form__el{
+	padding-bottom:30px;
+}
+.label{
+	display: flex;
+	padding-bottom:10px;
+	font-size: 20px;
+}
+.input, .textarea{
+	min-width: 300px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	border:none;
+	padding: 10px 20px;
+	font-size: 18px;
+}
+.input:focus, .textarea:focus, .input:focus-visible, .textarea:focus-visible{
+	border: 1px solid #CFCFCF;
+}	
+.input{
+	min-height:40px;
+}
+.textarea{
+	min-height:240px;
+	resize: vertical;
+}
+
+/*  Bouton*/
+.form__btn{
+	width: 100%;
+	height: 50px;
+	border:none;
+	background: #0D6B9E;
+	color: #FFFFFF;
+	cursor: pointer;
+    
+	/*  Typo*/
+	font-weight: 500;
+	font-size: 25px;
+	
+	border: 1px solid #0D6B9E;
+}
+.form__btn:hover, .form__btn:focus{
+	width: 100%;
+	height: 50px;
+	border:none;
+	background:#FFFFFF;
+	color: #0D6B9E;
+	border: 1px solid #0D6B9E;
+}
