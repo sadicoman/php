@@ -68,7 +68,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwor
     <body class="body">
         <main>
         <?php 
-            if(!isset($_SESSION['connect'])){ ?>
+            if(!isset($_SESSION['connect'])) ?>
             <section class="section">
                 <h1 class="title">Inscription</h1>
                 <p>Bienvenue sur mon site, pour en voir plus, inscrivez-vous. Déjà inscrit ? <a class="lien" href="connection.php">connectez-vous.</a></p>
@@ -94,7 +94,6 @@ if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwor
                     }
                     
                 ?>
-
                 <form action="index.php" method="post">
                     <ul class="form__liste">
                         <li class="form__el input-group">
@@ -142,7 +141,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwor
                 </form>
             </section>
         <?php    
-            } else{ ?> 
+             else{ ?> 
             <section class="section">
                 <h1 class="title">Bonjour</h1>
                 <p>
